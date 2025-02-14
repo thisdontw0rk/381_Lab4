@@ -1,0 +1,49 @@
+<DOCTYPE html>
+<head>
+    <title>Exercise 2 - JavaScript Functions</title>
+</head>
+<body>
+    <h1>Open the Developer Console (F12) to Test the Functions</h1>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        console.log("add(5, 3):", add(5, 3)); 
+        console.log("subtract(5, 3):", subtract(5, 3)); 
+
+        function addWithDefault(a, b = 0) {
+            return a + b;
+        }
+
+        function subtractWithDefault(a, b = 0) {
+            return a - b;
+        }
+
+        console.log("addWithDefault(5):", addWithDefault(5));
+        console.log("subtractWithDefault(5):", subtractWithDefault(5));
+
+        const addArrow = (a, b = 0) => a + b;
+        const subtractArrow = (a, b = 0) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => (b !== 0 ? a / b : "Error: Division by zero");
+
+        console.log("addArrow(6, 4):", addArrow(6, 4)); 
+        console.log("subtractArrow(6, 4):", subtractArrow(6, 4)); 
+        console.log("multiply(6, 4):", multiply(6, 4));
+        console.log("divide(6, 2):", divide(6, 2));
+        console.log("divide(6, 0):", divide(6, 0)); 
+
+        function calculator(a, b, operation) {
+            return operation(a, b);
+        }
+
+        console.log("calculator(10, 5, addArrow):", calculator(10, 5, addArrow)); 
+        console.log("calculator(10, 5, multiply):", calculator(10, 5, multiply)); 
+    </script>
+</body>
+</html>

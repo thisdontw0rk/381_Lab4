@@ -1,0 +1,63 @@
+<DOCTYPE html>
+
+<head>
+   
+    <title>Exercise 3 - JavaScript Arrays and Objects</title>
+</head>
+<body>
+    <h1>Open the Developer Console (F12) to Test the Code</h1>
+    <script>
+        
+        let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"];
+
+        
+        console.log("classRoster as string:", classRoster.toString());
+
+        console.log("Original classRoster:", classRoster);
+
+        classRoster.push("Fiona", "Nancy");
+
+        classRoster.shift();
+
+        console.log("Updated classRoster:", classRoster);
+
+        console.log("Total students:", classRoster.length);
+
+        let classInfo = {
+            className: "ENSF381: Full-Stack Web Development",
+            instructor: "Dr. Deb",
+            students: classRoster,
+            details: {
+                semester: "Winter",
+                year: 2025
+            }
+        };
+
+        
+        classInfo.schedule = ["Monday", "Wednesday", "Friday"];
+
+        classInfo.instructor = "Dr. Deb"; 
+
+        console.log("Class Name:", classInfo.className);
+        console.log("Instructor:", classInfo.instructor);
+        console.log("Students:", classInfo.students);
+
+        console.log("Semester:", classInfo.details.semester);
+
+        console.log("Updated classInfo:", classInfo);
+
+        let { className, students } = classInfo;
+        console.log("Destructured className:", className);
+        console.log("Destructured students:", students);
+
+        let { semester, year } = classInfo.details;
+        console.log("Destructured semester:", semester);
+        console.log("Destructured year:", year);
+
+        let [student1, student2, ...remainingStudents] = students;
+        console.log("First student:", student1);
+        console.log("Second student:", student2);
+        console.log("Remaining students:", remainingStudents);
+    </script>
+</body>
+</html>
