@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab4 - Exercise 2</title>
+</head>
+<body>
+    <h1>JavaScript Calculator</h1>
+    
+    <script>
+        // Function Declarations
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        console.log("Add:", add(5, 3));          // Output: 8
+        console.log("Subtract:", subtract(10, 4)); // Output: 6
+
+        // Default Parameters
+        function addDefault(a, b = 0) {
+            return a + b;
+        }
+
+        function subtractDefault(a, b = 0) {
+            return a - b;
+        }
+
+        console.log("Add with default:", addDefault(7));   // Output: 7
+        console.log("Subtract with default:", subtractDefault(7)); // Output: 7
+
+        // Arrow Functions
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => b !== 0 ? a / b : "Error: Division by zero";
+
+        console.log("Multiply:", multiply(6, 2)); // Output: 12
+        console.log("Divide:", divide(8, 2));     // Output: 4
+        console.log("Divide by zero:", divide(10, 0)); // Output: Error
+
+        // Callback Function
+        function calculator(a, b, operation) {
+            return operation(a, b);
+        }
+
+        console.log("Calculator Add:", calculator(10, 5, add));    // Output: 15
+        console.log("Calculator Multiply:", calculator(4, 3, multiply)); // Output: 12
+    </script>
+</body>
+</html>
