@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise 1 - Exploring JavaScript Fundamentals</title>
+</head>
+<body>
+    <h1>JavaScript Lab</h1>
+    <script>
+        let variableLet = "Initial Value";
+        const variableConst = "Constant Value";
+        
+        console.log("Initial let variable:", variableLet);
+        variableLet = "Updated Value";
+        console.log("Updated let variable:", variableLet);
+     
+        let string1 = "Hello, world!";
+        let string2 = "JavaScript is fun!";
+        
+        console.log("Length of string1:", string1.length);
+        console.log("Concatenated string:", string1 + " " + string2);
+        console.log("Modified string2:", string2.replace("fun", "awesome"));
+ 
+        let name = "Alice";
+        let age = 25;
+        let templateString = `My name is ${name} and I am ${age} years old`;
+        console.log(templateString);
+
+        let currentDate = new Date();
+        console.log("Current date:", currentDate);
+        
+        console.log("Year:", currentDate.getFullYear());
+        console.log("Month:", currentDate.getMonth() + 1);
+        console.log("Day of the week (number):", currentDate.getDay());
+        
+        let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        console.log("Day of the week (name):", weekdays[currentDate.getDay()]);
+    </script>
+</body>
+</html>
